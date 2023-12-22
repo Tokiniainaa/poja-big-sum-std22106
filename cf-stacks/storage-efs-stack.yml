@@ -41,17 +41,17 @@ Resources:
     Type: AWS::EFS::MountTarget
     Properties:
       FileSystemId: !Ref Filesystem
-      SubnetId: !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/subnet/public1/id}}'
+      SubnetId: !Sub '{{resolve:ssm:/poja-big-sum-std22106/subnet/public1/id}}'
       SecurityGroups:
-        - !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/sg/id}}'
+        - !Sub '{{resolve:ssm:/poja-big-sum-std22106/sg/id}}'
 
   MountTarget2:
     Type: AWS::EFS::MountTarget
     Properties:
       FileSystemId: !Ref Filesystem
-      SubnetId: !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/subnet/public2/id}}'
+      SubnetId: !Sub '{{resolve:ssm:/poja-big-sum-std22106/subnet/public2/id}}'
       SecurityGroups:
-        - !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/sg/id}}'
+        - !Sub '{{resolve:ssm:/poja-big-sum-std22106/sg/id}}'
 
 Outputs:
   AccessPointArnSSM:
