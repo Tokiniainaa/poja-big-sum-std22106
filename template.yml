@@ -13,10 +13,10 @@ Globals:
     
     VpcConfig:
       SecurityGroupIds:
-        - !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/sg/id}}'
+        - !Sub '{{resolve:ssm:/poja-big-sum-std22106/sg/id}}'
       SubnetIds:
-        - !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/subnet/public1/id}}'
-        - !Sub '{{resolve:ssm:C:/Program Files/Git/poja-big-sum-std22106/subnet/public2/id}}'
+        - !Sub '{{resolve:ssm:/poja-big-sum-std22106/subnet/public1/id}}'
+        - !Sub '{{resolve:ssm:/poja-big-sum-std22106/subnet/public2/id}}'
     Environment:
       Variables:
         ENV: !Ref Env
